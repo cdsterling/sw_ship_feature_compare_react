@@ -116,8 +116,17 @@ class App extends Component {
 
     selectFeature = (ev) =>{
         console.log("Entering selectFeature method with params: ", ev.target.value);
+        let newMaxFeatureSize = 0;
+        let newSelectedFeature = ev.target.value;
+        for (let myShip of this.state.displayShips){
+            if (Number(myShip[newSelectedFeature]) > newMaxFeatureSize){
+                console.log("updating max feature length from: "+ newMaxFeatureSize +" to: "+ myShip[newSelectedFeature] );
+                newMaxFeatureSize = Number(myShip[newSelectedFeature]);
+            }
+        }
         this.setState({
-            selectedFeature: ev.target.value
+            selectedFeature: newSelectedFeature,
+            maxFeatureSize: newMaxFeatureSize
         })
 
     }
