@@ -1,5 +1,6 @@
 to run locally: npm run start
 
+![image](https://user-images.githubusercontent.com/4316178/73598789-848f1c80-44f1-11ea-9a68-45862a98b3c0.png)
 #Star Wars Starship Crewsize Comparison
 to run locally: npx node-static
 
